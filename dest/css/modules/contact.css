@@ -1,0 +1,58 @@
+.contact__wrapper {
+  max-width: 840px;
+  margin: auto;
+  border: 2px solid #0058ad;
+}
+
+.contact__heading {
+  font-family: YuGo;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.8;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 3.6px;
+  background: #0058ad;
+}
+
+.contact-head {
+  padding: 10px 0 28px;
+}
+
+.contact-head__txt {
+  font-size: 15px;
+  line-height: 1.33;
+  color: #808080;
+  text-align: center;
+  letter-spacing: 1.95px;
+  margin-bottom: 10px;
+}
+
+.contact-desc {
+  text-align: center;
+  background-color: #f1f1f1;
+  padding: 10px 0;
+}
+
+.contact-desc__txt1 {
+  font-size: 15px;
+  line-height: 1.33;
+  color: #808080;
+  letter-spacing: 1.95px;
+}
+
+.contact-desc__number {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1.26;
+  color: #0058ad;
+  text-align: center;
+  letter-spacing: 1.36px;
+}
+
+.contact-desc__txt2 {
+  font-size: 10px;
+  line-height: 2;
+  color: #808080;
+  letter-spacing: 1.3px;
+}

@@ -1,0 +1,119 @@
+.voice{
+}
+
+.voice__wrapper {
+  padding: 75px 0 85px 0;
+}
+
+.voice__heading {
+  margin-bottom: 21px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.voice__heading > span:nth-child(1) {
+  display: block;
+  font-family: $font-ud;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 0 #0058ad, -1px 1px 0 #0058ad, 1px -1px 0 #0058ad, -1px -1px 0 #0058ad;
+  letter-spacing: 0.3em;
+}
+
+.voice__heading > span:nth-child(2) {
+  display: block;
+  font-family: $font-yugo;
+  font-size: 18px;
+  color: #0058ad;
+  text-align: center;
+  letter-spacing: 0.3em;
+}
+
+.voice__txt {
+  margin-bottom: 30px;
+  font-family: $font-ud;
+  font-size: 13px;
+  color: #808080;
+  text-align: center;
+  letter-spacing: 1.56px;
+}
+
+.voice-columns-card__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.voice-columns-card {
+  width: 23.2%;
+  background-color: #ffffbd;
+  border: solid 1px #0058ad;
+}
+
+.voice-columns-card__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 16px 16px 14px 19px;
+  background: #fff;
+}
+
+.voice-columns-card__tit {
+  font-family: $font-yugo;
+}
+
+.voice-columns-card__tit > span:nth-child(1) {
+  display: block;
+  padding-bottom: 4px;
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  color: #0058ad;
+  letter-spacing: 0.35px;
+  border-bottom: 2px solid #0058ad;
+}
+
+.voice-columns-card__tit > span:nth-child(1) > span {
+  font-size: 8px;
+  letter-spacing: 0.2px;
+}
+
+.voice-columns-card__tit > span:nth-child(2) {
+  display: block;
+  padding-bottom: 4px;
+  font-family: YuGo;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1;
+  color: #0058ad;
+  letter-spacing: 0.28px;
+  border-bottom: 2px solid #0058ad;
+}
+
+.voice-columns-card__pic {
+  width: 50%;
+  max-width: 105px;
+}
+
+.voice-columns-card__pic > img {
+  display: block;
+  width: 100%;
+}
+
+.voice-columns-card__desc {
+  padding: 19px 15px 26px 22px;
+}
+
+.voice-columns-card__txt1 {
+  font-family: $font-yugo;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0058ad;
+}
+
+.voice-columns-card__txt2 {
+  font-family: $font-ud;
+  font-size: 12px;
+  line-height: 2;
+  color: #808080;
+}

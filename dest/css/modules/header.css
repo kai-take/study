@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 14px 110px 10px 100px;
+}
+
+.header__logo > img {
+  display: block;
+  width: 100%;
+}
+
+.header__tel {
+  letter-spacing: 0.7px;
+}
+
+.tel__txt {
+  font-family: YuGo;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  color: #808080;
+}
+
+.tel__number {
+  margin-top: 4px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1;
+  color: #0058ad;
+  position: relative;
+}
+
+.tel__number::before {
+  position: absolute;
+  top: -3px;
+  left: -39px;
+  display: inline-block;
+  width: 34px;
+  height: 35px;
+  vertical-align: middle;
+  content: "";
+  background-image: url(../../../src/img/phone.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}

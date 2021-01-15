@@ -1,0 +1,203 @@
+#header
+ -h1.header__logo
+  -a
+   -img
+ -div.header__phone
+  -p.phone__txt
+   -p.phone__number  
+
+#kv
+ -div.kv__wrapper
+  -ul.kv__list
+   -li.kv__item
+    -img
+  -div.kv__txt
+   -span
+   -span
+   -span
+  -button.kv__btn
+  -div.kv__box
+   -ul.kv__list
+    -li.kv__item
+     
+  
+#about
+ -div.about__wrapper
+  -h2.about__heading
+   -span
+   -span.balloon
+  -div.about-headColumns
+   -div.about-headColumns__card
+    -div.about-headColumns__number
+    -p.about-headColumns__tit
+    -figure.about-headColumns__pic
+     -img
+    -p.about-headColumns__txt 
+  -div.about-descColumns
+   -div.balloon
+   -div.about-descColumns__card
+    -div.about-descColumns__tit
+    -figure.about-descColumns__pic
+     -img
+    -p.about-descColumns__txt
+  -button.about__btn
+
+#worry
+ -div.worry__wrapper
+  -div.worry-headColumns
+   -div.worry-headColumns__card
+    -ul.worry-headColumns__list
+     -li.worry-headColumns__item
+  -div.worry-descColumns
+   -
+   -div.worry-descColumns__card
+    -p.worry-descColumns__tit
+  -div.worry-box
+   -figure.worry-box__pic1
+   -p.worry-box__txt
+   -figure.worry-box__pic2
+  -button.about__btn
+
+#voice
+ -div.voice__wrapper
+  -h2.voice__tit
+   -span
+   -span
+  -p.voice__txt
+  -div.voice-columns
+   -div.voice-columns-card
+    -div.voice-columns-card__head
+     -div.voice-columns-card__tit
+      -span
+      -span
+     -figure.voice-columns-card__pic
+      -img
+    -div.voice-columns-card__desc
+     -p.voice-columns-card__txt1
+     -p.voice-columns-card__txt2
+     
+#faq
+ -div.faq__wrapper
+  -h2.faq__tit
+   -span
+   -span
+ -div.faq-columns
+  -div.faq-columns-card
+   -div.faq-columns-card__head
+    -p.faq-columns-card__txt1
+    -p.faq-columns-card__txt2
+   -div.faq-columns-card__desc
+    -p.faq-columns-card__txt1
+    -p.faq-columns-card__txt2
+
+#contact
+ -div.contact__wrapper
+  -h2.contact__tit
+   -div.contact-head
+    -p.contact-head__txt
+    -button.contact-head__btn
+   -div.contact-desc
+    -p.contact-desc__txt
+
+#footer
+ -small.footer.txt  
+
+
+ボタンはbutton.btn => <button onclick="location.href='./index.html'">テキスト</button>
+ 
+
+クラス名案
+content
+inner
+label
+head desc
+flow
+feature
+commentbox
+section > globalContainer > content > mainContainer
+wrapperはレイアウト的に、containerはセマンティックの意味的に
+具体性の追求。
+
+[見出し]
+h1 ロゴ
+h2 セクションタイトル
+
+[共通要素]
+section__wrapperのmargin幅は共通なので、section__wrapperを各セクションの直下のwrapperに持たせる・
+吹き出しはballoonとしているが、divかspanかはまだ統一していない。
+
+font
+
+[次やる事]
+worryのピクパ
+
+widthやmarginの値は適当なので、纏めて正確な値を計算して、当てる。
+font関連もサイズ以外は今の所適当に指定。
+aboutの数字は画像で実装しているけど、あとでテキストベースに変更
+
+
+[気付き]
+inline-blockでの横並びは、強制力は無く、横並びに出来る十分な幅がないと成立しない。flexが確実か。
+zeplinのcssの精度が高い訳ではない
+あとで画像の追加があるかもしれないので、圧縮した画像は最後に指定する。
+worryのチェックボックスが表示されない。display、画像のパスが原因ではなかった。
+live-serverやbrouwser-syncでは表示される。
+パスの指定方法も原因の一つ。一旦srcまで戻って、画像へのパスを通すと表示された。
+テキストは文字数とかでレイアウトが崩れる事があるので、最初から適切にコピペをしておく。
+flex等で横並びにする時は、幅が100%を超えない様に気を付ける。要素の幅を潰さない。min-widthなどを使えば防げる。
+zeplineからのline-heightは極力指定しない。あとで直すのがめんどくさい。
+
+擬似要素での画像は画像のサイズをwidthとheightで指定する。
+文字数や別の画像のことも考えて固定値は持たせる
+browseリロードでのミスは無くす、不要なスタイルを消したり。細かくコピペしたり。
+文字のアーチはcssだけだと厳しいらしい。jqueryのプラグインを使うのが手軽か。
+
+vertical-alignじゃ無くても縦の中央寄せは出来る。flexやpostionで
+
+[疑問]
+
+htmlのスペースは何個が正解？
+一つのsectionに二つのh2は良いのか？
+
+paddingやmargin,文字のスタイルが、ピクセルパーフェクトを目指すと、0や5などの綺麗な数字にならない事がほとんど。それは良いのか
+テキストベースか画像ベースかの見極めが大事。デザイナーやディレクターに確認する。テキストベースだと時間がかかりそうですとか。
+
+[詰まり]
+aboutのイラストのカード位置の位置揃えがずれる。
+異なる画像のサイズを用いながら、テキストの開始位置を揃えるにはどうしたら良いか。flexの割合を当てるとか
+最悪、それぞれでmarginを当てる。
+
+worryの穴空きをどう表現するか悩む。シンプルにspanを五つで、配置か。
+
+margin-bottomの挙動がおかしい。指定した要素が上に行く。要は余白が下に伸びていくか、上に伸びていくかの違い
+
+worryの穴空きとイラストのz-indexが上手くいかない。
+watch:sassが上手くコンパイルされない。
+
+電話のロゴがsvgで書き出しすると、表示されない。シェイプの変換は出来なかった。
+
+faqのカードが揃わない。親要素をはみ出している。
+=> max-heightを指定しているのが原因。意外とこういうパターンが多い。
+
+周辺要素のスタイルが原因でレイアウトが崩れている事が多いので、期待通りにならない時は、周りをシンプルにしていく。
+
+
+文字数によって、画像の縮み方が異なる。
+heightを指定してもだめ。
+様々なパターンを提案し、妥協点を作るしかないかも。文字にvwとか
+タイトルvwを指定するのは結構良い感じ
+figureにflex-shrink:0;を指定すると、画像のサイズが縮まない
+
+伸ばす方向に、paddingを入れない。
+テキストにheightの固定値。max-heightを設定して、幅に制限をかける。
+テキストに幅を指定するのは別に無しではない。スマートでない気がするのは確かだけど。
+
+flexにおける詰まりや問題は、wrapを増やす事で解決する事が多い。
+
+margin:auto;やflexは余白をイメージする事が大切。
+
+文字にwidthやheightを持たせることは割とある。抵抗を無くしていこう。
+
+jsの読み込み
+[経過時間]
+16:30

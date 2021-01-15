@@ -1,0 +1,66 @@
+.contact {
+  padding: 75px 0 67px;
+}
+
+.contact__wrapper {
+  max-width: 840px;
+  margin: auto;
+  border: 2px solid #0058ad;
+}
+
+.contact__heading {
+  padding: 5px 0 8px 0;
+  font-family: $font-yugo;
+  font-size: 20px;
+  font-weight: bold;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.1em;
+  background: #0058ad;
+}
+
+.contact-head {
+  padding: 17px 0 33px;
+}
+
+.contact-head__txt {
+  margin-bottom: 10px;
+  font-family: $font-ud;
+  font-size: 15px;
+  color: #808080;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.contact-head__btn.btn{
+}
+
+.contact-desc {
+  padding: 15px 0 13px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.contact-desc__txt1 {
+  font-family: $font-ud;
+  font-size: 15px;
+  color: #808080;
+  letter-spacing: 0.1em;
+}
+
+.contact-desc__number {
+  margin-bottom: 4px;
+  font-family: $font-yugo;
+  font-size: 34px;
+  font-weight: bold;
+  color: #0058ad;
+  text-align: center;
+}
+
+.contact-desc__txt2 {
+  font-family: $font-ud;
+  font-size: 10px;
+  color: #808080;
+  letter-spacing: 0.1em;
+}

@@ -1,0 +1,106 @@
+.kv{
+}
+
+.kv__wrapper {
+  position: relative;
+}
+
+.kv__slick{
+}
+
+.slick__item{
+}
+
+.slick__item > img {
+  display: block;
+  width: 100%;
+}
+
+.kv__txtBox {
+  position: absolute;
+  bottom: 200px;
+  left: 20%;
+  font-family: $font-yugo;
+}
+
+.kv__txt1 {
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #0058ad;
+}
+
+.kv__txt1 > span {
+  padding: 4px 9px;
+  padding-right: 11px;
+  background: #ffac50;
+}
+
+.kv__txt2 {
+  font-family: YuGo;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 1.24;
+  color: #0058ad;
+}
+
+.kv__txt2 > span {
+  font-size: 30px;
+}
+
+.kv__txt2 > span:nth-of-type(3) {
+  font-size: 49px;
+}
+
+.kv__btn {
+  position: absolute;
+  bottom: 130px;
+  left: 20%;
+}
+
+.kv__box {
+  position: absolute;
+  bottom: 5px;
+  left: 20%;
+  width: 60%;
+  padding: 14px 0 13px 27px;
+  background-color: #f1f1f1;
+  border: solid 2px #719fd0;
+}
+
+.kv__list{
+}
+
+.kv__item {
+  font-family: $font-ud;
+}
+
+.kv__item:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.kv__item > a {
+  display: flex;
+  align-items: center;
+}
+
+.kv__date {
+  margin-right: 23px;
+  font-size: 14px;
+  color: #808080;
+}
+
+.kv__label {
+  display: block;
+  width: 103px;
+  margin-right: 13px;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  background: #719fd0;
+}
+
+.kv__tit {
+  font-size: 14px;
+  color: #808080;
+}
