@@ -1130,3 +1130,48 @@ faq
   background-image: url(../../../src/img/worry__question.png);
   transform: translate(-50%, 0);
 }
+
+.popup {
+  background: blue;
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.popup__inner {
+  position: relative;
+}
+
+.popup__img > img {
+  width: 100%;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 3em;
+  right: 1em;
+  cursor: pointer;
+}
+
+.close-btn > span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  margin-bottom: 7px;
+  background: white;
+}
+
+.close-btn > span:nth-child(2) {
+  margin-bottom: 0;
+}
+
+.close-btn > span:nth-child(1) {
+  transform: translateY(0) rotate(135deg);
+}
+
+.close-btn > span:nth-child(2) {
+  transform: translateY(-9px) rotate(-135deg);
+}

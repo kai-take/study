@@ -8,5 +8,21 @@
       centerPadding: '17.6%',
       arrows: false,
     });
+
+    $('.close-btn').on('click', () => {
+      $('.popup').fadeOut();
+      console.log("click");
+      
+  });
+  $(function(){
+    $(".popup").show();
+    $.cookie('btnFlg') == 'on'?$(".popup").hide():$(".popup").show();
+    $(".close-btn").click(function(){
+        $(".popup").fadeOut();
+        $.cookie('btnFlg', 'on', { expires: 30,path: '/' }); //cookieの保存
+    });
+});
+
+    
     
   })
