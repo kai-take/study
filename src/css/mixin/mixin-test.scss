@@ -1,0 +1,108 @@
+/* ---------------------------------
+margin センタリング
+--------------------------------- */
+@mixin center($m:null,$mt:null,$mb:null) {
+  @if $m == null and $mt == null and $mb == null {
+    // 横以外のmarginがいらない場合
+    margin: 0 auto;
+  }
+
+  @else if $m != null {
+    // 上下のmarginが共通の場合
+    margin: $m auto;
+  }
+
+  @else if $mt == null and $mb !=null {
+    // 下のみmarginが必要な場合
+    margin: 0 auto $mb;
+  }
+
+  @else if $mb == null {
+    // 上のみmarginが必要な場合
+    margin: $mt auto 0;
+  }
+
+  @else {
+    margin: $mt auto $mb;
+  }
+} // @mixin center
+
+/* ---------------------------------
+文字が溢れた際の表示を … にする。
+--------------------------------- */
+@mixin line-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// width指定有りバージョン
+// どっちも使ってみて便利な方を使う
+@mixin truncate($width: 100%) {
+  display: block;
+  width: $width;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------------------------------
+擬似要素アイコン
+--------------------------------- */
+@mixin hoge($name:arrow, $size:00, $color:white, $margin:0 0 0 0, $position:before) {
+  // mixin指定方法    ：ファイル名（接頭）, 画像サイズ, 色, margin, beforeかafterか
+  // ファイル名の指定例：arrow-00-white.png
+  &::before,
+  &::after {
+    width: #{$size}px;
+    height: #{$size}px;
+    margin: $margin;
+    vertical-align: middle;
+    background-size: cover;
+
+    @include mediaSP() { // SPの場合半分のサイズ
+      width: #{$size / 2}px;
+      height: #{$size / 2}px;
+    }
+  }
+
+  @if ( $position == "before" ) {
+    &::before {
+      @include pseudo;
+
+      background-image: url(../images/common/#{name}#{$size}-#{$color}.png);
+    }
+  }
+
+  @else if ( $position == "after" ) {
+    &::after {
+      @include pseudo;
+
+      background-image: url(../images/common/#{name}#{$size}-#{$color}.png);
+    }
+  }
+}
+
+/* ---------------------------------
+くの字
+--------------------------------- */
+@mixin arrowMark($color,$width,$height) { // pxまで引数に含める
+  width: $width;
+  height: $height;
+  content: '';
+  border: 0;
+  border-top: solid 2px $color;
+  border-right: solid 2px $color;
+  transform: rotate(45deg);
+}
+
+@mixin arrowMarkReverse($color,$width,$height) { // 左向き
+  width: $width;
+  height: $height;
+  content: '';
+  border: 0;
+  border-top: solid 2px $color;
+  border-right: solid 2px $color;
+  transform: rotate(-135deg);
+}
